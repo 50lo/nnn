@@ -3582,7 +3582,7 @@ try_quit:
 			i = get_wch(&c);
 			if (i != ERR) {
 				if (c == ESC)
-					c = 'q'; /* Quit context */
+					c = CONTROL('Q'); /* Quit context */
 				else {
 					unget_wch(c);
 					c = ';';
@@ -3893,7 +3893,7 @@ static int filterentries(char *path, char *lastname)
 		case ESC:
 			if (handle_alt_key(ch) != ERR) {
 				if (*ch == ESC) /* Handle Alt+Esc */
-					*ch = 'q'; /* Quit context */
+					*ch = CONTROL('Q'); /* Quit context */
 				else {
 					unget_wch(*ch);
 					*ch = ';'; /* Run plugin */
@@ -6274,7 +6274,7 @@ static void show_help(const char *path)
 		"a1-4  Context%11(Sh)Tab  Cycle/new context\n"
 	    "62Esc ^Q  Quit%19^y  Next young\n"
 		 "b^G  QuitCD%18Q  Pick/err, quit\n"
-	  "4q Alt+Esc  Quit context%12d  Detail mode toggle\n"
+	 "4^Q Alt+Esc  Quit context%12d  Detail mode toggle\n"
 	"0\n"
 	"1FILTER & PROMPT\n"
 		  "c/  Filter%17^N  Toggle type-to-nav\n"
