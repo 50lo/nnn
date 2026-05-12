@@ -280,7 +280,7 @@ static struct key bindings[] = {
 	/* Toggle preview pane */
 	{ 'P',            SEL_PREVIEW },
 	/* Quit a context */
-	{ 'q',            SEL_QUITCTX },
+	{ CONTROL('Q'),   SEL_QUITCTX },
 	/* Change dir on quit */
 	{ CONTROL('G'),   SEL_QUITCD },
 	/* Quit */
