@@ -2420,7 +2420,7 @@ static bool initcurses(void *oldmask)
 		return FALSE;
 	}
 
-	cbreak();
+	raw();
 	noecho();
 	nonl();
 	//intrflush(stdscr, FALSE);
