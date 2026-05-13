@@ -3581,7 +3581,7 @@ try_quit:
 			timeout(0);
 			i = get_wch(&c);
 			if (i != ERR) {
-				if (c == ESC)
+				if (c == ESC || c == 'w')
 					c = 'q'; /* Quit context */
 				else {
 					unget_wch(c);
@@ -3892,7 +3892,7 @@ static int filterentries(char *path, char *lastname)
 #endif
 		case ESC:
 			if (handle_alt_key(ch) != ERR) {
-				if (*ch == ESC) /* Handle Alt+Esc */
+				if (*ch == ESC || *ch == 'w') /* Handle Alt+Esc, Alt+w */
 					*ch = 'q'; /* Quit context */
 				else {
 					unget_wch(*ch);
