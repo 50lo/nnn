@@ -69,7 +69,8 @@ Runs on the Pi, [Termux](https://www.youtube.com/embed/AbaauM7gUJw) (Android), L
   - Proceed to next file on file open and selection
 - Search
   - Instant filtering with *search-as-you-type*
-  - Fuzzy, regex (POSIX/PCRE2) and string (default) filters
+  - Fuzzy scoring, in-order fuzzy, regex (POSIX/PCRE2) and string (default) filters
+  - Highlight and dim filter results
   - Subtree search plugin to open or edit files
 - Sort
   - Ordered pure numeric names by default (visit `/proc`)
@@ -77,7 +78,9 @@ Runs on the Pi, [Termux](https://www.youtube.com/embed/AbaauM7gUJw) (Android), L
   - By name, access/change/mod (default) time, size, extn
   - Reverse sort
   - Directory-specific ordering
+  - Next young (newest) file with <kbd>^y</kbd>
 - Mimes
+  - Native preview pane with toggle
   - Preview hovered files in FIFO-based previewer
   - Open with desktop opener or specify a custom opener
   - File-specific colors (or minimal _dirs in context color_)
